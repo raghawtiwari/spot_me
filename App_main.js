@@ -141,10 +141,6 @@ class Main extends React.Component {
                   data,
                 }) => {
                   function h(item, max_time, min_time) {
-
-                    //var start = key_string.toString().slice(11,16)
-                    //var end = key_string.toString().slice(11,14)+"30"
-                    // console.log("key",start,end)
                     if (item.path) {
                       return (<ResultCard key={item._id}>
                         <div>
@@ -195,8 +191,6 @@ class Main extends React.Component {
                         let k = rawData.aggregations.camera.buckets;
                         let x;
                         let ret = k.map(x => {
-                          //console.log(x.doc_count)
-                          //let hits =x.histo.buckets[0].recent.hits.hits
                           let m = x.histo.buckets.map(y => {
                             if (y.doc_count > 0) {
                               let hits = y.recent.hits.hits
@@ -205,36 +199,17 @@ class Main extends React.Component {
                               let max_time = hits[hits.length - 1]._source.time
                               let kk = 0
                               if (max_time < min_time) {
-                                //console.log("yes",max_time,min_time)
                                 kk = min_time
                                 min_time = max_time
                                 max_time = kk
-                                //console.log("changed",max_time,min_time)
+                                
                               }
-                              // let i;
-                              // var k =hits[0]._id
-                              // let videos={  k: {
-                              //   src: "./"+hits[0]._source.path,
-                              //   frames: 2,
-                              //   cols: 1,
-                              //   fps:2,
-                              //   loops :1,
-                              //   onEnd: "onEndfunc"
-                              // }};
+                          
                               let clip1 = {}
                               let element = {}
                               let i;
                               for (i = 0; i < hits.length; i++) {
-                                // clip1= {
-                                //   src: "./"+hits[i]._source.path,
-                                //   frames: 2,
-                                //   cols: 1,
-                                //   fps:2,
-                                //   loops :1,
-                                //   onEnd: "onEndfunc"
-                                // }
-
-                                // videos[hits[i]._id] = clip1
+                              
                                 element = {}
                                 element[hits[i]._id] = {
                                   src: "./" + hits[i]._source.path, frames: 2, cols: 1, loops: 1, onEnd: function () {
@@ -245,15 +220,13 @@ class Main extends React.Component {
                               }
                               console.log("dict", ElementList)
 
-                              //console.log("time",max_time)
-                              //hits.map(data=>console.log(data._source)); 
                               return (<ReactiveList.ResultCardsWrapper>
 
-                                 {//hits.map(e=>h(e,x.key_as_string))
+                                 {
         
           h(hits[0],max_time,min_time)
             }  
-                                {/* <CanvidApp clipsData={ElementList} /> */}
+                              
                               </ReactiveList.ResultCardsWrapper>)
                             }
                           })
@@ -261,10 +234,7 @@ class Main extends React.Component {
 
                         })
 
-                        //console.log("k",k)
-                        // for (x=0; x< k.length;x++){
-                        //   console.log("x",x)
-                        //   }
+                         }
                         console.log('ret',ret)
                         return (
                           
