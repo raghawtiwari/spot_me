@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import { TagCloud } from 'react-tagcloud';
-import CanvidApp from './components/CanvidComponent'
-import $ from 'jquery';
-import canvid from '/home/raghaw/image/node_modules/canvid/canvid.js'
 import {
   ReactiveBase,
   ReactiveList,
@@ -18,28 +14,13 @@ import {
 
 import './App.css';
 
-const data = [{ 'value': 'person', 'count': 76308 }, { 'value': 'bicycle', 'count': 90542 }, { 'value': 'car', 'count': 71400 }, { 'value': 'motorcycle', 'count': 66942 }, { 'value': 'airplane', 'count': 16103 }, { 'value': 'bus', 'count': 92061 }, { 'value': 'train', 'count': 68770 }, { 'value': 'truck', 'count': 78450 }, { 'value': 'boat', 'count': 94472 }, { 'value': 'traffic light', 'count': 5127 }, { 'value': 'fire hydrant', 'count': 57088 }, { 'value': 'stop sign', 'count': 94336 }, { 'value': 'parking meter', 'count': 2300 }, { 'value': 'bench', 'count': 86997 }, { 'value': 'bird', 'count': 53399 }, { 'value': 'cat', 'count': 59055 }, { 'value': 'dog', 'count': 54710 }, { 'value': 'horse', 'count': 49630 }, { 'value': 'sheep', 'count': 55634 }, { 'value': 'cow', 'count': 53106 }, { 'value': 'elephant', 'count': 86733 }, { 'value': 'bear', 'count': 94794 }, { 'value': 'zebra', 'count': 54134 }, { 'value': 'giraffe', 'count': 82299 }, { 'value': 'backpack', 'count': 42667 }, { 'value': 'umbrella', 'count': 92557 }, { 'value': 'handbag', 'count': 12837 }, { 'value': 'tie', 'count': 6830 }, { 'value': 'suitcase', 'count': 50862 }, { 'value': 'frisbee', 'count': 85686 }, { 'value': 'skis', 'count': 3711 }, { 'value': 'snowboard', 'count': 1284 }, { 'value': 'sports ball', 'count': 20358 }, { 'value': 'kite', 'count': 50355 }, { 'value': 'baseball bat', 'count': 5894 }, { 'value': 'baseball glove', 'count': 18068 }, { 'value': 'skateboard', 'count': 44016 }, { 'value': 'surfboard', 'count': 22119 }, { 'value': 'tennis racket', 'count': 34597 }, { 'value': 'bottle', 'count': 36272 }, { 'value': 'wine glass', 'count': 70969 }, { 'value': 'cup', 'count': 43259 }, { 'value': 'fork', 'count': 47448 }, { 'value': 'knife', 'count': 78366 }, { 'value': 'spoon', 'count': 94311 }, { 'value': 'bowl', 'count': 60046 }, { 'value': 'banana', 'count': 11350 }, { 'value': 'apple', 'count': 70513 }, { 'value': 'sandwich', 'count': 80878 }, { 'value': 'orange', 'count': 40857 }, { 'value': 'broccoli', 'count': 33948 }, { 'value': 'carrot', 'count': 60137 }, { 'value': 'hot dog', 'count': 40025 }, { 'value': 'pizza', 'count': 20598 }, { 'value': 'donut', 'count': 60343 }, { 'value': 'cake', 'count': 59497 }, { 'value': 'chair', 'count': 31953 }, { 'value': 'couch', 'count': 47161 }, { 'value': 'potted plant', 'count': 83121 }, { 'value': 'bed', 'count': 44721 }, { 'value': 'dining table', 'count': 19566 }, { 'value': 'toilet', 'count': 43784 }, { 'value': 'tv', 'count': 26300 }, { 'value': 'laptop', 'count': 94428 }, { 'value': 'mouse', 'count': 34135 }, { 'value': 'remote', 'count': 84010 }, { 'value': 'keyboard', 'count': 57236 }, { 'value': 'cell phone', 'count': 83453 }, { 'value': 'microwave', 'count': 45092 }, { 'value': 'oven', 'count': 66751 }, { 'value': 'toaster', 'count': 50109 }, { 'value': 'sink', 'count': 62604 }, { 'value': 'refrigerator', 'count': 95722 }, { 'value': 'book', 'count': 27449 }, { 'value': 'clock', 'count': 7273 }, { 'value': 'vase', 'count': 77328 }, { 'value': 'scissors', 'count': 97735 }, { 'value': 'teddy bear', 'count': 90921 }, { 'value': 'hair drier', 'count': 37313 }, { 'value': 'toothbrush', 'count': 5367 }]
-var canvidControl = canvid({
-  selector: '.canvid-container',
-  videos: {
-    clip1: {
-      src: './frames1/400.jpg',
-      frames: 2,
-      cols: 1,
-      fps: 2,
-      loops: 1,
-
-    }
-  }
-})
-
 class Main extends React.Component {
   render() {
     return (
       <div className="main-container">
         <ReactiveBase
 
-          app="practice1"
+          app="spot"
           url="http://localhost:9200"
 
         >
