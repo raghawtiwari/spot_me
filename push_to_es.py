@@ -4,7 +4,7 @@ import os, uuid
 import json
 import time
 
-def create_index(es_object, index_name='vid_detect7'):
+def create_index(es_object, index_name='spot'):
     created = False
     # index settings
     settings = {
@@ -98,8 +98,8 @@ def bulk_json_data(json_path, _index, doc_type):
 if __name__ == '__main__':
   logging.basicConfig(level=logging.ERROR)
   es=connect_elasticsearch()
-  index_name = "vid_detect2"
-  create_index(es, index_name='vid_detect7')
+  index_name = "spot"
+  create_index(es, index_name='spot')
   start =time.time()
   path_to_json_output = "./sample_results.txt"
   response= helpers.bulk(es, bulk_json_data(path_to_json_output, index_name, "people"))
