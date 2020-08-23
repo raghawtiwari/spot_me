@@ -26,7 +26,7 @@
     npm start
 
 ### Steps to show images or Videos 
-    1. Go to your name_of_your_app/src directory replace App.js from above App.js similarly for App.css .
+    1. Go to your name_of_your_app/src directory replace App.js code from above App_main.js code similarly for App.css .
     2. Go to name_of_your_app/public directory, copy frame.py and push_to_es.py file here .
     3. run frame.py here with terminal.
     4. run push_to_es.py here with the terminal.
