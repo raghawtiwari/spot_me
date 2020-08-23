@@ -20,8 +20,10 @@
     • <http.port: 9200>
     
 ## Running
-  cd  name_of_your_app
-  npm start
+    cd elasticsearch_directory<br />
+    bin/elasticsearch <br />
+    cd  name_of_your_app <br />
+    npm start
 
 ### Steps to show images or Videos 
     1. Go to name_of_your_app/public directory and copy all images here .
