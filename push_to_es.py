@@ -101,7 +101,7 @@ if __name__ == '__main__':
   index_name = "vid_detect2"
   create_index(es, index_name='vid_detect7')
   start =time.time()
-  path_to_json_output = "/home/raghaw/project/kafka_spark_es/video_results"
+  path_to_json_output = "./sample_results.txt"
   response= helpers.bulk(es, bulk_json_data(path_to_json_output, index_name, "people"))
   end =time.time()
   print("succeccfully send...")
